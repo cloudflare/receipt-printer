@@ -51,8 +51,8 @@ def grid_adjacent(vertex):
 
 def make_grid():
 	weights = undirected_graph()
-	for x in xrange(GRID_WIDTH):
-		for y in xrange(GRID_HEIGHT):
+	for x in range(GRID_WIDTH):
+		for y in range(GRID_HEIGHT):
 			vertex = (x,y)
 			for neighbor in grid_adjacent(vertex):
 				weights[(vertex,neighbor)] = rnd.random()
@@ -127,10 +127,10 @@ def draw_tree(spanning):
 	# Add a row of off pixels for the top
 	[pixels.append([0]*bl + [1]*bl + ([0] * (img_width-2*bl))) for _ in range(bl)]
 
-	for y in xrange(GRID_HEIGHT):
+	for y in range(GRID_HEIGHT):
 		# Row containing nodes
 		row = [0] * bl # First column is off
-		for x in xrange(GRID_WIDTH):
+		for x in range(GRID_WIDTH):
 			[row.append(1) for _ in range(bl)]
 			if x < GRID_WIDTH-1:
 				[row.append( int(((x,y),(x+1,y)) in spanning) ) for _ in range(bl)]
@@ -140,7 +140,7 @@ def draw_tree(spanning):
 		if y < GRID_HEIGHT-1:
 			# Row containing vertical connections between nodes
 			row = [0] * bl # First column is off
-			for x in xrange(GRID_WIDTH):
+			for x in range(GRID_WIDTH):
 				[row.append( int(((x,y),(x,y+1)) in spanning) ) for _ in range(bl)]
 				[row.append(0) for _ in range(bl)]
 			[row.append(0) for _ in range(bl)]
