@@ -26,6 +26,8 @@ code](http://davidbau.com/downloads/sudoku.py).
 
 8. The current UTC date and time in ISO8601 format.
 
+![](https://github.com/cloudflare/receipt-printer/raw/master/printing.gif)
+
 The Printer
 -----------
 
