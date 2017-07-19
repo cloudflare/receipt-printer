@@ -54,21 +54,23 @@ and a [button](http://razzpisampler.oreilly.com/ch07.html) connected
 to two GPIO ports. Pressing the button simply executes `ep.py`. It
 uses code similar to this:
 
-    import RPi.GPIO as GPIO
-    import time, os
+```python
+import RPi.GPIO as GPIO
+import time, os
 
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(False)
-    GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.setup(25, GPIO.OUT)
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(25, GPIO.OUT)
 
-    while True:
-        input_state = GPIO.input(18)
-        if input_state == False:
-            GPIO.output(25, GPIO.HIGH)
-            os.system("python ep.py")
-            GPIO.output(25, GPIO.HIGH)
-        time.sleep(0.01)
+while True:
+    input_state = GPIO.input(18)
+    if input_state == False:
+        GPIO.output(25, GPIO.HIGH)
+        os.system("python ep.py")
+        GPIO.output(25, GPIO.HIGH)
+    time.sleep(0.01)
+```
 
 The button is connected between GND and GPIO18. The LED is connected
 between GND and GPIO25 with a 330 Ohm resistor to GND.
