@@ -1,0 +1,3 @@
+diceware
+pypng
+python-escpos
