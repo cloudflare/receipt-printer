@@ -31,6 +31,11 @@ xcoord  = [ 15, 55,  95,  139, 179, 219,  263, 303, 343 ]
 ycoord  = [ 56, 96, 136,  180, 220, 260,  304, 344, 384 ]
 numbers = []
 
+try:
+  file         # Python 2
+except NameError:
+  file = open  # Python 3
+
 def main():
   # Crop number bitmaps out of source image
   for i in range(9):
