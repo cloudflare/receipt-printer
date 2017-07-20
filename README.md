@@ -38,6 +38,8 @@ Printer but the code will work with other printers that handle the
 common). This specific printer was only used because we had one lying
 around.
 
+![](https://github.com/cloudflare/receipt-printer/raw/master/output.jpg)
+
 Random Source
 -------------
 
@@ -72,3 +74,6 @@ uses code similar to this:
 
 The button is connected between GND and GPIO18. The LED is connected
 between GND and GPIO25 with a 330 Ohm resistor to GND.
+
+![](https://github.com/cloudflare/receipt-printer/raw/master/button.jpg)
+
