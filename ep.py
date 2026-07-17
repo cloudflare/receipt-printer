@@ -4,7 +4,7 @@
 # Copyright (c) 2017 Cloudflare, Inc.
 
 from escpos.printer import Usb
-from datetime import datetime
+from datetime import datetime, timezone
 
 import random, string, os, qrcode
 
