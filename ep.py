@@ -83,7 +83,7 @@ image(p, "maze.png")
 os.system("python sudoku.py")
 image(p, "sudoku.png")
 
-dt = datetime.utcnow()
+dt = datetime.now(timezone.utc)
 text(p, "\n" + dt.isoformat("Z"))
 text(p, "cloudflare.com")
 
