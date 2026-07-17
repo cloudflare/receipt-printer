@@ -4,7 +4,7 @@
 # Copyright (c) 2017 Cloudflare, Inc.
 
 from escpos.printer import Usb
-from datetime import datetime
+from datetime import datetime, timezone
 
 import random, string, os, qrcode
 
@@ -83,7 +83,7 @@ image(p, "maze.png")
 os.system("python sudoku.py")
 image(p, "sudoku.png")
 
-dt = datetime.utcnow()
+dt = datetime.now(timezone.utc)
 text(p, "\n" + dt.isoformat("Z"))
 text(p, "cloudflare.com")
 
